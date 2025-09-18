@@ -9,22 +9,22 @@ const contactInfo = [
   {
     icon: Phone,
     title: '전화 문의',
-    content: '1588-0000',
+    content: '031-358-2711',
     description: '평일 09:00 - 18:00',
-    href: 'tel:1588-0000'
+    href: 'tel:031-358-2711'
   },
   {
     icon: Mail,
     title: '이메일 문의',
-    content: 'contact@modaliving.co.kr',
+    content: 'wsspbox@naver.com',
     description: '24시간 접수 가능',
-    href: 'mailto:contact@modaliving.co.kr'
+    href: 'mailto:wsspbox@naver.com'
   },
   {
     icon: MapPin,
     title: '본사 주소',
-    content: '서울시 강남구 테헤란로 123',
-    description: '모다리빙 본사',
+    content: '경기도 화성시 장안면 수정로 64-15',
+    description: '(주)신일글로텍',
     href: 'https://maps.google.com'
   },
   {

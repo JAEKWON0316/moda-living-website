@@ -23,9 +23,9 @@ export const SITE_CONFIG = {
 
 // 연락처 정보
 export const CONTACT_INFO = {
-  phone: '1588-0000',
-  email: 'contact@modaliving.co.kr',
-  address: '서울시 강남구 테헤란로 123',
+  phone: '031-358-2711',
+  email: 'wsspbox@naver.com',
+  address: '경기도 화성시 장안면 수정로 64-15',
   businessHours: '평일 09:00 - 18:00 (점심시간 12:00-13:00)',
   kakaoTalk: '@모다리빙',
   naverStore: 'https://smartstore.naver.com/modahlv'
@@ -97,11 +97,11 @@ export const BREAKPOINTS = {
 
 // 회사 정보
 export const COMPANY_INFO = {
-  legalName: '(주)모다리빙',
-  ceo: '홍길동',
-  businessNumber: '123-45-67890',
-  ecommerceNumber: '제2024-서울강남-1234호',
-  address: '서울시 강남구 테헤란로 123',
+  legalName: '(주)신일글로텍',
+  ceo: '이혁',
+  businessNumber: '654-87-01637',
+  ecommerceNumber: '2024-화성장안-0057',
+  address: '경기도 화성시 장안면 수정로 64-15',
   established: '2019',
   employees: '50-100명',
   vision: '모던한 라이프스타일을 통한 지속가능한 미래'

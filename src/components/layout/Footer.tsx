@@ -56,17 +56,17 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="h-4 w-4" />
-                <span>1588-0000</span>
+                <span>031-358-2711</span>
               </div>
               
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="h-4 w-4" />
-                <span>contact@modaliving.co.kr</span>
+                <span>wsspbox@naver.com</span>
               </div>
               
               <div className="flex items-start space-x-3 text-gray-300">
                 <MapPin className="h-4 w-4 mt-1" />
-                <span>서울시 강남구 테헤란로 123<br />모다리빙 본사</span>
+                <span>경기도 화성시 장안면 수정로 64-15<br />(주)신일글로텍</span>
               </div>
             </div>
 
@@ -179,8 +179,8 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* 회사 정보 */}
             <div className="text-sm text-gray-400">
-              <div>상호: (주)모다리빙 | 대표: 홍길동</div>
-              <div>사업자등록번호: 123-45-67890 | 통신판매업신고: 제2024-서울강남-1234호</div>
+              <div>상호: (주)신일글로텍 | 대표: 이혁</div>
+              <div>사업자등록번호: 654-87-01637 | 통신판매업신고: 2024-화성장안-0057</div>
               <div className="mt-2">
                 © 2024 MODA LIVING. All rights reserved.
               </div>
