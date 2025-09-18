@@ -250,31 +250,6 @@ export default function Hero() {
               )}
               
               {/* 플로팅 요소들 */}
-              <motion.div
-                className="absolute top-8 right-8 glass-morphism p-4 rounded-2xl"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <div className="text-primary-600 text-2xl">♻️</div>
-              </motion.div>
-              
-              <motion.div
-                className="absolute bottom-8 left-8 glass-morphism p-4 rounded-2xl"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity }}
-              >
-                <div className="text-accent-600 text-2xl">✨</div>
-              </motion.div>
-
-              {/* 할인 뱃지 */}
-              <motion.div
-                className="absolute top-4 left-4 bg-accent-500 text-white px-4 py-2 rounded-full font-bold shadow-lg"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.5 }}
-              >
-                론칭 특가 -25%
-              </motion.div>
             </div>
 
             {/* 제품 특징 카드들 */}
