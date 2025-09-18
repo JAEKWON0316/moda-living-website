@@ -248,18 +248,6 @@ export default function Products() {
                   Coming Soon
                 </div>
               </div>
-
-              {/* 하단 알림 섹션 */}
-              <div className="p-6 bg-gray-50/50 border-t border-gray-200">
-                <div className="text-center">
-                  <p className="text-sm text-gray-600 mb-3">
-                    출시 알림을 받으시겠습니까?
-                  </p>
-                  <button className="w-full bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-full hover:bg-primary-50 hover:border-primary-300 hover:text-primary-600 transition-all duration-300">
-                    알림 신청하기
-                  </button>
-                </div>
-              </div>
             </div>
           </motion.div>
         </motion.div>
