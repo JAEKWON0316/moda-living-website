@@ -69,11 +69,11 @@ export default function Header() {
           {/* CTA 버튼들 */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              href="tel:1588-0000"
+              href="tel:031-358-2711"
               className="flex items-center space-x-2 text-gray-600 hover:text-primary-600 transition-colors"
             >
               <Phone className="h-4 w-4" />
-              <span className="text-sm">1588-0000</span>
+              <span className="text-sm">031-358-2711</span>
             </Link>
             
             <Link
@@ -138,11 +138,11 @@ export default function Header() {
                 
                 <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200">
                   <Link
-                    href="tel:1588-0000"
+                    href="tel:031-358-2711"
                     className="flex items-center space-x-2 text-gray-600"
                   >
                     <Phone className="h-4 w-4" />
-                    <span>1588-0000</span>
+                    <span>031-358-2711</span>
                   </Link>
                   
                   <Link
