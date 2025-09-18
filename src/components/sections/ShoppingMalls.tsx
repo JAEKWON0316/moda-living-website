@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Home, Rocket } from 'lucide-react'
+import { ExternalLink, Home, Rocket, Store } from 'lucide-react'
 import Link from 'next/link'
 
 export default function ShoppingMalls() {
@@ -210,7 +210,7 @@ export default function ShoppingMalls() {
           className="mt-16 text-center"
         >
           <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-100 rounded-full">
-            <ShoppingCart className="h-5 w-5 text-primary-600" />
+            <Store className="h-5 w-5 text-primary-600" />
             <span className="text-gray-700 font-medium">
               모든 쇼핑몰에서 동일한 품질의 정품을 만나보실 수 있습니다
             </span>

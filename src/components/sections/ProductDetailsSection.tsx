@@ -1,8 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { Eye, X } from 'lucide-react'
 import Image from 'next/image'
 
 // 1~9번까지 순서대로 이미지 배열
@@ -19,17 +17,8 @@ const detailImages = [
 ]
 
 export default function ProductDetailsSection() {
-  const [showModal, setShowModal] = useState(false)
-  const [modalImageIndex, setModalImageIndex] = useState(0)
-
-  const openModal = (index: number) => {
-    setModalImageIndex(index)
-    setShowModal(true)
-  }
-
   return (
-    <>
-      <section id="product-details" className="section-padding bg-gray-50">
+    <section id="product-details" className="section-padding bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -63,49 +52,13 @@ export default function ProductDetailsSection() {
                     alt={`모다리빙 상세정보 ${index + 1}`}
                     width={800}
                     height={600}
-                    className="w-full h-auto cursor-pointer transition-transform duration-300 group-hover:scale-105"
-                    onClick={() => openModal(index)}
+                    className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
                   />
-                  
-                  {/* 이미지 확대 아이콘 */}
-                  <div className="absolute top-4 right-4 w-10 h-10 bg-black/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Eye className="h-5 w-5 text-white" />
-                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* 이미지 확대 모달 */}
-      {showModal && (
-        <div className="fixed inset-0 bg-black/90 z-[60] flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="relative max-w-6xl max-h-[90vh] w-full h-full"
-          >
-            <button
-              onClick={() => setShowModal(false)}
-              className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
-            >
-              <X className="h-5 w-5 text-white" />
-            </button>
-            
-            <div className="relative w-full h-full">
-              <Image
-                src={detailImages[modalImageIndex]}
-                alt={`모다리빙 상세정보 ${modalImageIndex + 1}`}
-                fill
-                className="object-contain"
-                sizes="100vw"
-              />
-            </div>
-          </motion.div>
-        </div>
-      )}
-    </>
   )
 }
