@@ -1,0 +1,119 @@
+{
+  "name": "모다리빙 - 친환경 분리수거함 전문브랜드",
+  "short_name": "모다리빙",
+  "description": "세련된 디자인과 실용성을 겸비한 분리수거함으로 지속가능한 라이프스타일을 제안하는 모다리빙",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#22c55e",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ko",
+  "categories": ["lifestyle", "shopping", "utilities"],
+  "icons": [
+    {
+      "src": "/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "제품 보기",
+      "short_name": "제품",
+      "description": "모다리빙의 다양한 분리수거함 제품을 둘러보세요",
+      "url": "/#products",
+      "icons": [
+        {
+          "src": "/images/shortcut-products.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "구매하기",
+      "short_name": "구매",
+      "description": "네이버 스마트스토어에서 바로 구매하기",
+      "url": "https://smartstore.naver.com/modahlv",
+      "icons": [
+        {
+          "src": "/images/shortcut-shop.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "문의하기",
+      "short_name": "문의",
+      "description": "제품 문의 및 고객 상담",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "/images/shortcut-contact.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-mobile-1.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/screenshot-mobile-2.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/screenshot-desktop-1.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/images/screenshot-desktop-2.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  }
+}
