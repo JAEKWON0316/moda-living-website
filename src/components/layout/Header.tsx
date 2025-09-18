@@ -8,14 +8,27 @@ import Link from 'next/link'
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
     }
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // 초기값 설정
+    handleResize()
+    
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleResize)
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   const navItems = [
@@ -34,7 +47,7 @@ export default function Header() {
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
+      animate={{ y: isMobile && !scrolled ? -100 : 0 }}
       transition={{ duration: 0.6 }}
     >
       <div className="container mx-auto px-4">

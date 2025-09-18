@@ -52,7 +52,7 @@ export default function ProductDetailsSection() {
                     alt={`모다리빙 상세정보 ${index + 1}`}
                     width={800}
                     height={600}
-                    className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-auto transition-transform duration-300"
                   />
                 </div>
               </motion.div>
