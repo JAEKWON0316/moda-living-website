@@ -145,8 +145,8 @@ export default function Reviews() {
           <div className="glass-morphism p-2 rounded-full">
             {[
               { id: 'all', label: '전체' },
-              { id: 5, label: '⭐⭐⭐⭐⭐' },
-              { id: 4, label: '⭐⭐⭐⭐+' }
+              { id: '5', label: '⭐⭐⭐⭐⭐' },
+              { id: '4', label: '⭐⭐⭐⭐+' }
             ].map((filterOption) => (
               <button
                 key={filterOption.id}
