@@ -22,7 +22,11 @@ export default function Products() {
 
   const filteredProducts = selectedCategory === 'all' 
     ? products 
-    : products.filter(product => product.category === selectedCategory)
+    : products.filter(product => 
+        Array.isArray(product.category) 
+          ? product.category.includes(selectedCategory)
+          : product.category === selectedCategory
+      )
 
   return (
     <section id="products" className="section-padding bg-gray-50">
