@@ -201,6 +201,68 @@ export default function About() {
           })}
         </motion.div>
 
+        {/* 입점 쇼핑몰 */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
+        >
+          <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            <span className="gradient-text">공식 입점</span> 쇼핑몰
+          </h3>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            모다리빙 제품을 다양한 온라인 쇼핑몰에서 만나보세요
+          </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <motion.div
+              whileHover={{ y: -5, scale: 1.05 }}
+              className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all"
+            >
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-8 h-8 bg-green-600 rounded"></div>
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">네이버</h4>
+              <p className="text-sm text-gray-600">스마트스토어</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -5, scale: 1.05 }}
+              className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all"
+            >
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-8 h-8 bg-blue-600 rounded"></div>
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">쿠팡</h4>
+              <p className="text-sm text-gray-600">로켓배송</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -5, scale: 1.05 }}
+              className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all"
+            >
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-8 h-8 bg-orange-600 rounded"></div>
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">오늘의 집</h4>
+              <p className="text-sm text-gray-600">인테리어몰</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -5, scale: 1.05 }}
+              className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all"
+            >
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-8 h-8 bg-red-600 rounded"></div>
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">G마켓</h4>
+              <p className="text-sm text-gray-600">오픈마켓</p>
+            </motion.div>
+          </div>
+        </motion.div>
+
         {/* 회사 연혁 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

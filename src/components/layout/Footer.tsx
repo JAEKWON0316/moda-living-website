@@ -161,15 +161,41 @@ export default function Footer() {
 
             {/* 공식 스토어 */}
             <div className="p-4 bg-gradient-to-r from-primary-600 to-accent-600 rounded-xl">
-              <h5 className="font-semibold mb-3">공식 스토어</h5>
-              <Link
-                href="https://smartstore.naver.com/modahlv"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full bg-white text-gray-900 px-4 py-3 rounded-lg text-center font-semibold hover:bg-gray-100 transition-colors"
-              >
-                네이버 스마트스토어 방문
-              </Link>
+              <h5 className="font-semibold mb-3">공식 입점 쇼핑몰</h5>
+              <div className="space-y-2">
+                <Link
+                  href="https://smartstore.naver.com/modahlv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-white text-gray-900 px-4 py-2 rounded-lg text-center font-medium hover:bg-gray-100 transition-colors text-sm"
+                >
+                  네이버 스마트스토어
+                </Link>
+                <Link
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-white text-gray-900 px-4 py-2 rounded-lg text-center font-medium hover:bg-gray-100 transition-colors text-sm"
+                >
+                  쿠팡
+                </Link>
+                <Link
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-white text-gray-900 px-4 py-2 rounded-lg text-center font-medium hover:bg-gray-100 transition-colors text-sm"
+                >
+                  오늘의 집
+                </Link>
+                <Link
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-white text-gray-900 px-4 py-2 rounded-lg text-center font-medium hover:bg-gray-100 transition-colors text-sm"
+                >
+                  G마켓
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>
