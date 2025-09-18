@@ -35,14 +35,14 @@ export default function ShoppingMalls() {
             whileHover={{ y: -5 }}
             className="group"
           >
-            <div className="bg-green-50 p-8 rounded-3xl border border-green-100 hover:shadow-xl transition-all duration-300">
+            <div className="bg-primary-50 p-8 rounded-3xl border border-primary-100 hover:shadow-xl transition-all duration-300">
               <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center">
                   <Star className="h-8 w-8 text-white" />
                 </div>
               </div>
               <div className="text-center mb-4">
-                <h3 className="text-2xl font-bold text-green-700 mb-1">네이버</h3>
+                <h3 className="text-2xl font-bold text-primary-800 mb-1">네이버</h3>
                 <p className="text-gray-600 font-medium">스마트스토어</p>
               </div>
               <p className="text-gray-600 text-center mb-6 text-sm leading-relaxed">
@@ -50,15 +50,15 @@ export default function ShoppingMalls() {
               </p>
               <div className="space-y-2 mb-6">
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mr-2"></div>
                   네이버페이 결제
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mr-2"></div>
                   당일/익일배송
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mr-2"></div>
                   구매보호서비스
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default function ShoppingMalls() {
                 href="https://smartstore.naver.com/modahlv"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 text-white hover:opacity-90 group-hover:shadow-lg w-full py-3 px-4 rounded-xl font-semibold transition-all flex items-center justify-center space-x-2"
+                className="bg-primary-600 text-white hover:bg-primary-700 group-hover:shadow-lg w-full py-3 px-4 rounded-xl font-semibold transition-all flex items-center justify-center space-x-2"
               >
                 <span>구매하기</span>
                 <ExternalLink className="h-4 w-4" />
@@ -83,14 +83,14 @@ export default function ShoppingMalls() {
             whileHover={{ y: -5 }}
             className="group"
           >
-            <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100 hover:shadow-xl transition-all duration-300">
+            <div className="bg-secondary-50 p-8 rounded-3xl border border-secondary-200 hover:shadow-xl transition-all duration-300">
               <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 bg-secondary-600 rounded-2xl flex items-center justify-center">
                   <Truck className="h-8 w-8 text-white" />
                 </div>
               </div>
               <div className="text-center mb-4">
-                <h3 className="text-2xl font-bold text-blue-700 mb-1">쿠팡</h3>
+                <h3 className="text-2xl font-bold text-secondary-700 mb-1">쿠팡</h3>
                 <p className="text-gray-600 font-medium">로켓배송</p>
               </div>
               <p className="text-gray-600 text-center mb-6 text-sm leading-relaxed">
@@ -98,15 +98,15 @@ export default function ShoppingMalls() {
               </p>
               <div className="space-y-2 mb-6">
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-secondary-600 rounded-full mr-2"></div>
                   로켓배송
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-secondary-600 rounded-full mr-2"></div>
                   무료반품
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-secondary-600 rounded-full mr-2"></div>
                   쿠팡페이
                 </div>
               </div>
@@ -125,14 +125,14 @@ export default function ShoppingMalls() {
             whileHover={{ y: -5 }}
             className="group"
           >
-            <div className="bg-orange-50 p-8 rounded-3xl border border-orange-100 hover:shadow-xl transition-all duration-300">
+            <div className="bg-accent-50 p-8 rounded-3xl border border-accent-200 hover:shadow-xl transition-all duration-300">
               <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 bg-accent-600 rounded-2xl flex items-center justify-center">
                   <Home className="h-8 w-8 text-white" />
                 </div>
               </div>
               <div className="text-center mb-4">
-                <h3 className="text-2xl font-bold text-orange-700 mb-1">오늘의 집</h3>
+                <h3 className="text-2xl font-bold text-accent-700 mb-1">오늘의 집</h3>
                 <p className="text-gray-600 font-medium">인테리어몰</p>
               </div>
               <p className="text-gray-600 text-center mb-6 text-sm leading-relaxed">
@@ -140,15 +140,15 @@ export default function ShoppingMalls() {
               </p>
               <div className="space-y-2 mb-6">
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-accent-600 rounded-full mr-2"></div>
                   인테리어 전문
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-accent-600 rounded-full mr-2"></div>
                   리뷰 풍부
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-accent-600 rounded-full mr-2"></div>
                   할인혜택
                 </div>
               </div>
@@ -167,14 +167,14 @@ export default function ShoppingMalls() {
             whileHover={{ y: -5 }}
             className="group"
           >
-            <div className="bg-red-50 p-8 rounded-3xl border border-red-100 hover:shadow-xl transition-all duration-300">
+            <div className="bg-primary-100 p-8 rounded-3xl border border-primary-200 hover:shadow-xl transition-all duration-300">
               <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-red-500 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 bg-primary-700 rounded-2xl flex items-center justify-center">
                   <ShoppingCart className="h-8 w-8 text-white" />
                 </div>
               </div>
               <div className="text-center mb-4">
-                <h3 className="text-2xl font-bold text-red-700 mb-1">G마켓</h3>
+                <h3 className="text-2xl font-bold text-primary-800 mb-1">G마켓</h3>
                 <p className="text-gray-600 font-medium">오픈마켓</p>
               </div>
               <p className="text-gray-600 text-center mb-6 text-sm leading-relaxed">
@@ -182,15 +182,15 @@ export default function ShoppingMalls() {
               </p>
               <div className="space-y-2 mb-6">
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-primary-700 rounded-full mr-2"></div>
                   G페이 적립
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-primary-700 rounded-full mr-2"></div>
                   무료배송
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-2"></div>
+                  <div className="w-1.5 h-1.5 bg-primary-700 rounded-full mr-2"></div>
                   할인쿠폰
                 </div>
               </div>

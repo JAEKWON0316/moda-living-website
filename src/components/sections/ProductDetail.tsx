@@ -275,8 +275,8 @@ export default function ProductDetail({ product, onClose }: ProductDetailProps) 
                   onClick={() => setIsWishlisted(!isWishlisted)}
                   className={`flex-shrink-0 p-3 rounded-full border-2 transition-colors ${
                     isWishlisted
-                      ? 'border-red-500 bg-red-50 text-red-600'
-                      : 'border-gray-300 text-gray-600 hover:border-red-500 hover:text-red-600'
+                      ? 'border-primary-500 bg-primary-50 text-primary-600'
+                      : 'border-gray-300 text-gray-600 hover:border-primary-500 hover:text-primary-600'
                   }`}
                 >
                   <Heart className={`h-5 w-5 ${isWishlisted ? 'fill-current' : ''}`} />

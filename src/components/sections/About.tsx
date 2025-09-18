@@ -105,23 +105,23 @@ export default function About() {
                 </p>
               </div>
               
-              <div className="p-4 bg-green-50 rounded-2xl">
-                <h4 className="font-bold text-green-800 mb-2">친환경</h4>
-                <p className="text-sm text-green-600">
+              <div className="p-4 bg-primary-50 rounded-2xl">
+                <h4 className="font-bold text-primary-800 mb-2">친환경</h4>
+                <p className="text-sm text-primary-600">
                   100% 재활용 가능한 소재로 지구 환경을 생각합니다.
                 </p>
               </div>
               
-              <div className="p-4 bg-blue-50 rounded-2xl">
-                <h4 className="font-bold text-blue-800 mb-2">실용성</h4>
-                <p className="text-sm text-blue-600">
+              <div className="p-4 bg-secondary-50 rounded-2xl">
+                <h4 className="font-bold text-secondary-800 mb-2">실용성</h4>
+                <p className="text-sm text-secondary-600">
                   사용자의 편의를 최우선으로 고려한 기능적 설계입니다.
                 </p>
               </div>
               
-              <div className="p-4 bg-purple-50 rounded-2xl">
-                <h4 className="font-bold text-purple-800 mb-2">품질</h4>
-                <p className="text-sm text-purple-600">
+              <div className="p-4 bg-accent-50 rounded-2xl">
+                <h4 className="font-bold text-accent-800 mb-2">품질</h4>
+                <p className="text-sm text-accent-600">
                   엄격한 품질 관리로 오래 사용할 수 있는 내구성을 보장합니다.
                 </p>
               </div>

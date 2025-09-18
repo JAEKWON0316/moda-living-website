@@ -199,7 +199,7 @@ export default function Features() {
                 <tr>
                   <td className="py-4 px-6 text-gray-900 font-medium">공간 효율성</td>
                   <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                    <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">
                       <Check className="h-4 w-4 mr-1" /> 우수
                     </span>
                   </td>
@@ -212,7 +212,7 @@ export default function Features() {
                 <tr>
                   <td className="py-4 px-6 text-gray-900 font-medium">디자인</td>
                   <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                    <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">
                       <Check className="h-4 w-4 mr-1" /> 모던
                     </span>
                   </td>
@@ -225,7 +225,7 @@ export default function Features() {
                 <tr>
                   <td className="py-4 px-6 text-gray-900 font-medium">내구성</td>
                   <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                    <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">
                       <Check className="h-4 w-4 mr-1" /> 5년 보증
                     </span>
                   </td>
@@ -238,7 +238,7 @@ export default function Features() {
                 <tr>
                   <td className="py-4 px-6 text-gray-900 font-medium">청소 편의성</td>
                   <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                    <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">
                       <Check className="h-4 w-4 mr-1" /> 매우 쉬움
                     </span>
                   </td>

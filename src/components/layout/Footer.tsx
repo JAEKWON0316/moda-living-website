@@ -75,7 +75,7 @@ export default function Footer() {
               <div className="px-3 py-2 bg-gray-700 rounded-lg text-xs text-gray-300">
                 KC 안전인증
               </div>
-              <div className="px-3 py-2 bg-green-700 rounded-lg text-xs text-white">
+              <div className="px-3 py-2 bg-primary-700 rounded-lg text-xs text-white">
                 친환경 인증
               </div>
             </div>

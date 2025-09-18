@@ -114,7 +114,7 @@ export default function Products() {
                   <div className="absolute top-4 right-4 z-10">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       product.inStock 
-                        ? 'bg-green-100 text-green-800' 
+                        ? 'bg-primary-100 text-primary-800' 
                         : 'bg-red-100 text-red-800'
                     }`}>
                       {product.inStock ? '재고 있음' : '품절'}

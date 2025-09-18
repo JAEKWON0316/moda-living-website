@@ -75,7 +75,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-lg"
             >
-              <span className="text-green-600 font-semibold text-sm">🏆 2024 친환경 인증</span>
+              <span className="text-primary-600 font-semibold text-sm">🏆 2024 친환경 인증</span>
             </motion.div>
 
             <motion.h1 
@@ -269,7 +269,7 @@ export default function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.4 }}
             >
-              <div className="text-sm font-semibold text-green-600 mb-1">친환경</div>
+              <div className="text-sm font-semibold text-primary-600 mb-1">친환경</div>
               <div className="text-2xl font-bold text-gray-900">100%</div>
             </motion.div>
           </motion.div>

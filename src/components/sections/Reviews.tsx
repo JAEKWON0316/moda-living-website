@@ -186,7 +186,7 @@ export default function Reviews() {
                           {filteredReviews[currentReview]?.name}
                         </h4>
                         {filteredReviews[currentReview]?.verified && (
-                          <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
+                          <span className="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">
                             구매 인증
                           </span>
                         )}
