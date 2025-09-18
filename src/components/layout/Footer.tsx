@@ -182,7 +182,7 @@ export default function Footer() {
               <div>상호: (주)신일글로텍 | 대표: 이혁</div>
               <div>사업자등록번호: 654-87-01637 | 통신판매업신고: 2024-화성장안-0057</div>
               <div className="mt-2">
-                © 2024 MODA LIVING. All rights reserved.
+                © 2025 MODA LIVING. All rights reserved.
               </div>
             </div>
 
