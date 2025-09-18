@@ -80,7 +80,7 @@ export default function Reviews() {
 
   const filteredReviews = filter === 'all' 
     ? reviews 
-    : reviews.filter(review => review.rating >= filter)
+    : reviews.filter(review => review.rating >= Number(filter))
 
   const nextReview = () => {
     setCurrentReview((prev) => (prev + 1) % filteredReviews.length)
