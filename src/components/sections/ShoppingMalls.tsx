@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, ShoppingCart, Star, Truck, Home } from 'lucide-react'
+import { ExternalLink, ShoppingCart, Truck, Home } from 'lucide-react'
 import Link from 'next/link'
 
 export default function ShoppingMalls() {
@@ -38,7 +38,7 @@ export default function ShoppingMalls() {
             <div className="bg-white p-8 rounded-3xl border border-gray-200 hover:shadow-xl transition-all duration-300">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center">
-                  <Star className="h-8 w-8 text-white" />
+                  <span className="text-3xl font-bold text-white">N</span>
                 </div>
               </div>
               <div className="text-center mb-4">
