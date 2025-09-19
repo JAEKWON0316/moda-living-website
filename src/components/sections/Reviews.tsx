@@ -328,14 +328,14 @@ export default function Reviews() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <div className="inline-block p-8 bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl text-white">
+          <div className="inline-block p-8 bg-primary-600 rounded-3xl text-white shadow-2xl">
             <h3 className="text-2xl font-bold mb-4">
               당신도 모다리빙의 만족한 고객이 되어보세요
             </h3>
-            <p className="mb-6 opacity-90">
+            <p className="mb-6 opacity-95">
               지금 주문하면 특별 할인 혜택을 받을 수 있습니다
             </p>
-            <button className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg">
               지금 주문하기
             </button>
           </div>

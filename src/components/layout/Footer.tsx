@@ -166,7 +166,7 @@ export default function Footer() {
                 href="https://smartstore.naver.com/modahlv"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-primary-100 text-primary-700 px-4 py-3 rounded-lg text-center font-semibold hover:bg-primary-200 transition-colors border border-primary-200"
+                className="block w-full bg-white/10 text-white px-4 py-3 rounded-lg text-center font-semibold hover:bg-white/20 transition-colors transition-colors border border-bg-white/10"
               >
                 네이버 스마트스토어 방문
               </Link>
