@@ -79,87 +79,89 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
           >
-            {/* 베이지색 배경 원형 요소들 */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <motion.div
-                className="absolute top-8 left-8 w-40 h-40 bg-amber-200/40 rounded-full mix-blend-multiply filter blur-xl"
-                animate={{
-                  x: [0, 50, 0],
-                  y: [0, -30, 0],
-                }}
-                transition={{
-                  duration: 15,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-              <motion.div
-                className="absolute top-1/3 right-12 w-32 h-32 bg-stone-300/35 rounded-full mix-blend-multiply filter blur-lg"
-                animate={{
-                  x: [0, -30, 0],
-                  y: [0, 20, 0],
-                }}
-                transition={{
-                  duration: 12,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-              <motion.div
-                className="absolute bottom-16 left-1/3 w-28 h-28 bg-amber-100/45 rounded-full mix-blend-multiply filter blur-md"
-                animate={{
-                  x: [0, 20, 0],
-                  y: [0, -15, 0],
-                }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-              <motion.div
-                className="absolute top-2/3 left-16 w-36 h-36 bg-stone-200/40 rounded-full mix-blend-multiply filter blur-lg"
-                animate={{
-                  x: [0, -25, 0],
-                  y: [0, 35, 0],
-                }}
-                transition={{
-                  duration: 18,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-            </div>
+            {/* 텍스트 영역만을 위한 별도 컨테이너 */}
+            <div className="relative mb-8">
+              {/* 베이지색 배경 원형 요소들 - 텍스트 영역에만 제한 */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <motion.div
+                  className="absolute top-4 left-4 w-32 h-32 bg-amber-200/40 rounded-full mix-blend-multiply filter blur-xl"
+                  animate={{
+                    x: [0, 30, 0],
+                    y: [0, -20, 0],
+                  }}
+                  transition={{
+                    duration: 15,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                />
+                <motion.div
+                  className="absolute top-12 right-8 w-24 h-24 bg-stone-300/35 rounded-full mix-blend-multiply filter blur-lg"
+                  animate={{
+                    x: [0, -20, 0],
+                    y: [0, 15, 0],
+                  }}
+                  transition={{
+                    duration: 12,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                />
+                <motion.div
+                  className="absolute top-32 left-1/4 w-20 h-20 bg-amber-100/45 rounded-full mix-blend-multiply filter blur-md"
+                  animate={{
+                    x: [0, 15, 0],
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                />
+                <motion.div
+                  className="absolute top-24 right-1/4 w-28 h-28 bg-stone-200/40 rounded-full mix-blend-multiply filter blur-lg"
+                  animate={{
+                    x: [0, -15, 0],
+                    y: [0, 25, 0],
+                  }}
+                  transition={{
+                    duration: 18,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                />
+              </div>
 
-            <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                <span className="gradient-text">모다리빙</span>의 이야기
-              </h2>
-              
-              <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-                <p>
-                  모다리빙은 '모으다와 리빙을 합친' 의미로, 현대인의 라이프스타일에 맞는 
-                  실용적이고 아름다운 생활용품을 만듭니다.
-                </p>
+              <div className="relative z-10">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                  <span className="gradient-text">모다리빙</span>의 이야기
+                </h2>
                 
-                <p>
-                  비록 시작한 지 얼마 되지 않은 신생 브랜드이지만, 오랜 시간 축적된 
-                  제조 기술과 노하우를 바탕으로 확실한 품질의 제품을 보장합니다. 
-                  저희는 고객의 신뢰를 최우선으로 생각하며, 모든 제품에 대해 
-                  엄격한 품질 관리를 통해 완벽한 만족을 제공합니다.
-                </p>
-                
-                <p>
-                  단순히 쓰레기를 담는 용기가 아닌, 공간을 아름답게 하고 
-                  환경을 생각하는 지속가능한 제품을 통해 고객의 일상을 변화시킵니다.
-                </p>
-                
-                <p>
-                  우리의 모든 제품은 사용자의 편의성과 환경에 대한 책임을 
-                  동시에 고려하여 설계되었습니다.
-                </p>
+                <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+                  <p>
+                    모다리빙은 '모으다와 리빙을 합친' 의미로, 현대인의 라이프스타일에 맞는 
+                    실용적이고 아름다운 생활용품을 만듭니다.
+                  </p>
+                  
+                  <p>
+                    비록 시작한 지 얼마 되지 않은 신생 브랜드이지만, 오랜 시간 축적된 
+                    제조 기술과 노하우를 바탕으로 확실한 품질의 제품을 보장합니다. 
+                    저희는 고객의 신뢰를 최우선으로 생각하며, 모든 제품에 대해 
+                    엄격한 품질 관리를 통해 완벽한 만족을 제공합니다.
+                  </p>
+                  
+                  <p>
+                    단순히 쓰레기를 담는 용기가 아닌, 공간을 아름답게 하고 
+                    환경을 생각하는 지속가능한 제품을 통해 고객의 일상을 변화시킵니다.
+                  </p>
+                  
+                  <p>
+                    우리의 모든 제품은 사용자의 편의성과 환경에 대한 책임을 
+                    동시에 고려하여 설계되었습니다.
+                  </p>
+                </div>
               </div>
             </div>
 
