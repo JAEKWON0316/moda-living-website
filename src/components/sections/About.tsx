@@ -84,7 +84,7 @@ export default function About() {
             {/* 베이지색 배경 원형 요소들 */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
               <motion.div
-                className="absolute -top-10 -left-10 w-40 h-40 bg-amber-200/30 rounded-full mix-blend-multiply filter blur-xl"
+                className="absolute top-8 left-8 w-40 h-40 bg-amber-200/40 rounded-full mix-blend-multiply filter blur-xl"
                 animate={{
                   x: [0, 50, 0],
                   y: [0, -30, 0],
@@ -96,7 +96,7 @@ export default function About() {
                 }}
               />
               <motion.div
-                className="absolute top-1/2 -right-8 w-32 h-32 bg-stone-300/25 rounded-full mix-blend-multiply filter blur-lg"
+                className="absolute top-1/3 right-12 w-32 h-32 bg-stone-300/35 rounded-full mix-blend-multiply filter blur-lg"
                 animate={{
                   x: [0, -30, 0],
                   y: [0, 20, 0],
@@ -108,7 +108,7 @@ export default function About() {
                 }}
               />
               <motion.div
-                className="absolute -bottom-6 left-1/3 w-24 h-24 bg-amber-100/40 rounded-full mix-blend-multiply filter blur-md"
+                className="absolute bottom-16 left-1/3 w-28 h-28 bg-amber-100/45 rounded-full mix-blend-multiply filter blur-md"
                 animate={{
                   x: [0, 20, 0],
                   y: [0, -15, 0],
@@ -120,7 +120,7 @@ export default function About() {
                 }}
               />
               <motion.div
-                className="absolute top-1/4 left-1/4 w-28 h-28 bg-stone-200/35 rounded-full mix-blend-multiply filter blur-lg"
+                className="absolute top-2/3 left-16 w-36 h-36 bg-stone-200/40 rounded-full mix-blend-multiply filter blur-lg"
                 animate={{
                   x: [0, -25, 0],
                   y: [0, 35, 0],
