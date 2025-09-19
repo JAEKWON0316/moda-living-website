@@ -142,7 +142,7 @@ export default function Reviews() {
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-12"
         >
-          <div className="glass-morphism p-2 rounded-full">
+          <div className="glass-morphism p-1 md:p-2 rounded-full">
             {[
               { id: 'all', label: '전체' },
               { id: '5', label: '⭐⭐⭐⭐⭐' },
@@ -151,13 +151,16 @@ export default function Reviews() {
               <button
                 key={filterOption.id}
                 onClick={() => setFilter(filterOption.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`px-3 py-2 md:px-6 md:py-3 rounded-full font-medium transition-all duration-300 text-sm md:text-base ${
                   filter === filterOption.id
                     ? 'bg-primary-600 text-white shadow-lg'
                     : 'text-gray-600 hover:text-primary-600 hover:bg-white/30'
                 }`}
               >
-                {filterOption.label}
+                <span className="hidden sm:inline">{filterOption.label}</span>
+                <span className="sm:hidden">
+                  {filterOption.id === 'all' ? '전체' : filterOption.id === '5' ? '⭐5' : '⭐4+'}
+                </span>
               </button>
             ))}
           </div>

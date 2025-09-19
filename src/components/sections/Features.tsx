@@ -186,64 +186,64 @@ export default function Features() {
             </h3>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full max-w-4xl mx-auto">
+          <div className="overflow-x-auto -mx-4 px-4">
+            <table className="w-full max-w-4xl mx-auto min-w-[600px]">
               <thead>
                 <tr className="border-b-2 border-gray-200">
-                  <th className="py-4 px-6 text-left text-gray-900 font-semibold">비교 항목</th>
-                  <th className="py-4 px-6 text-center text-primary-600 font-semibold">모다리빙</th>
-                  <th className="py-4 px-6 text-center text-gray-500 font-semibold">일반 제품</th>
+                  <th className="py-3 md:py-4 px-3 md:px-6 text-left text-gray-900 font-semibold text-sm md:text-base">비교 항목</th>
+                  <th className="py-3 md:py-4 px-3 md:px-6 text-center text-primary-600 font-semibold text-sm md:text-base">모다리빙</th>
+                  <th className="py-3 md:py-4 px-3 md:px-6 text-center text-gray-500 font-semibold text-sm md:text-base">일반 제품</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr>
-                  <td className="py-4 px-6 text-gray-900 font-medium">공간 효율성</td>
-                  <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">
-                      <Check className="h-4 w-4 mr-1" /> 우수
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-gray-900 font-medium text-sm md:text-base">공간 효율성</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-center">
+                    <span className="inline-flex items-center px-2 md:px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-xs md:text-sm">
+                      <Check className="h-3 w-3 md:h-4 md:w-4 mr-1" /> 우수
                     </span>
                   </td>
-                  <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-center">
+                    <span className="inline-flex items-center px-2 md:px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs md:text-sm">
                       보통
                     </span>
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6 text-gray-900 font-medium">디자인</td>
-                  <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">
-                      <Check className="h-4 w-4 mr-1" /> 모던
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-gray-900 font-medium text-sm md:text-base">디자인</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-center">
+                    <span className="inline-flex items-center px-2 md:px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-xs md:text-sm">
+                      <Check className="h-3 w-3 md:h-4 md:w-4 mr-1" /> 모던
                     </span>
                   </td>
-                  <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-center">
+                    <span className="inline-flex items-center px-2 md:px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs md:text-sm">
                       구식
                     </span>
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6 text-gray-900 font-medium">내구성</td>
-                  <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">
-                      <Check className="h-4 w-4 mr-1" /> 매우 우수
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-gray-900 font-medium text-sm md:text-base">내구성</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-center">
+                    <span className="inline-flex items-center px-2 md:px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-xs md:text-sm">
+                      <Check className="h-3 w-3 md:h-4 md:w-4 mr-1" /> 매우 우수
                     </span>
                   </td>
-                  <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">
-                      펑범
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-center">
+                    <span className="inline-flex items-center px-2 md:px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs md:text-sm">
+                      보통
                     </span>
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6 text-gray-900 font-medium">청소 편의성</td>
-                  <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">
-                      <Check className="h-4 w-4 mr-1" /> 매우 쉬움
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-gray-900 font-medium text-sm md:text-base">청소 편의성</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-center">
+                    <span className="inline-flex items-center px-2 md:px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-xs md:text-sm">
+                      <Check className="h-3 w-3 md:h-4 md:w-4 mr-1" /> 매우 쉬움
                     </span>
                   </td>
-                  <td className="py-4 px-6 text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-center">
+                    <span className="inline-flex items-center px-2 md:px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs md:text-sm">
                       어려움
                     </span>
                   </td>
