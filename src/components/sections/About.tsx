@@ -110,33 +110,69 @@ export default function About() {
 
             {/* 핵심 가치 */}
             <div className="mt-8 grid grid-cols-2 gap-4">
-              <div className="p-4 bg-primary-50 rounded-2xl">
-                <h4 className="font-bold text-primary-800 mb-2">디자인</h4>
-                <p className="text-sm text-primary-600">
-                  모던하고 미니멀한 디자인으로 어떤 공간에도 자연스럽게 어울립니다.
-                </p>
-              </div>
+              <motion.div 
+                className="relative p-4 rounded-2xl overflow-hidden group cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-primary-50"></div>
+                <div className="absolute inset-0 glass-morphism border border-primary-100/50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-400/0 to-primary-600/0 group-hover:from-primary-400/5 group-hover:to-primary-600/5 transition-all duration-500"></div>
+                <div className="relative z-10">
+                  <h4 className="font-bold text-primary-800 mb-2">디자인</h4>
+                  <p className="text-sm text-primary-600">
+                    모던하고 미니멀한 디자인으로 어떤 공간에도 자연스럽게 어울립니다.
+                  </p>
+                </div>
+              </motion.div>
               
-              <div className="p-4 bg-primary-50 rounded-2xl">
-                <h4 className="font-bold text-primary-800 mb-2">최고급 원료</h4>
-                <p className="text-sm text-primary-600">
-                  고품질 원료 사용으로 튼튼한 내구성을 자랑합니다.
-                </p>
-              </div>
+              <motion.div 
+                className="relative p-4 rounded-2xl overflow-hidden group cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-primary-50"></div>
+                <div className="absolute inset-0 glass-morphism border border-primary-100/50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-400/0 to-primary-600/0 group-hover:from-primary-400/5 group-hover:to-primary-600/5 transition-all duration-500"></div>
+                <div className="relative z-10">
+                  <h4 className="font-bold text-primary-800 mb-2">최고급 원료</h4>
+                  <p className="text-sm text-primary-600">
+                    고품질 원료 사용으로 튼튼한 내구성을 자랑합니다.
+                  </p>
+                </div>
+              </motion.div>
               
-              <div className="p-4 bg-secondary-50 rounded-2xl">
-                <h4 className="font-bold text-secondary-800 mb-2">실용성</h4>
-                <p className="text-sm text-secondary-600">
-                  사용자의 편의를 최우선으로 고려한 기능적 설계입니다.
-                </p>
-              </div>
+              <motion.div 
+                className="relative p-4 rounded-2xl overflow-hidden group cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-secondary-50"></div>
+                <div className="absolute inset-0 glass-morphism border border-secondary-100/50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary-400/0 to-secondary-600/0 group-hover:from-secondary-400/5 group-hover:to-secondary-600/5 transition-all duration-500"></div>
+                <div className="relative z-10">
+                  <h4 className="font-bold text-secondary-800 mb-2">실용성</h4>
+                  <p className="text-sm text-secondary-600">
+                    사용자의 편의를 최우선으로 고려한 기능적 설계입니다.
+                  </p>
+                </div>
+              </motion.div>
               
-              <div className="p-4 bg-accent-50 rounded-2xl">
-                <h4 className="font-bold text-accent-800 mb-2">품질</h4>
-                <p className="text-sm text-accent-600">
-                  엄격한 품질 관리로 오래 사용할 수 있는 내구성을 보장합니다.
-                </p>
-              </div>
+              <motion.div 
+                className="relative p-4 rounded-2xl overflow-hidden group cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-accent-50"></div>
+                <div className="absolute inset-0 glass-morphism border border-accent-100/50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-accent-400/0 to-accent-600/0 group-hover:from-accent-400/5 group-hover:to-accent-600/5 transition-all duration-500"></div>
+                <div className="relative z-10">
+                  <h4 className="font-bold text-accent-800 mb-2">품질</h4>
+                  <p className="text-sm text-accent-600">
+                    엄격한 품질 관리로 오래 사용할 수 있는 내구성을 보장합니다.
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -191,22 +227,32 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6 rounded-3xl bg-white shadow-lg border border-gray-100"
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="relative text-center p-6 rounded-3xl overflow-hidden group cursor-pointer"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4">
-                  <IconComponent className="h-8 w-8 text-primary-600" />
-                </div>
+                {/* 기존 색상 유지하면서 glassmorphism 효과 */}
+                <div className="absolute inset-0 bg-white"></div>
+                <div className="absolute inset-0 glass-morphism border border-white/20 shadow-xl"></div>
                 
-                <div className="text-3xl font-bold text-gray-900 mb-2">
-                  {stat.number}
-                </div>
+                {/* 호버 시 글로우 효과 - 기존 primary 색상 사용 */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-400/0 to-primary-600/0 group-hover:from-primary-400/8 group-hover:to-primary-600/8 transition-all duration-500"></div>
                 
-                <div className="text-lg font-semibold text-gray-800 mb-1">
-                  {stat.label}
-                </div>
-                
-                <div className="text-sm text-gray-600">
-                  {stat.description}
+                <div className="relative z-10">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4 shadow-lg group-hover:shadow-primary-500/30 transition-all duration-300">
+                    <IconComponent className="h-8 w-8 text-primary-600" />
+                  </div>
+                  
+                  <div className="text-3xl font-bold text-gray-900 mb-2 group-hover:text-primary-700 transition-colors duration-300">
+                    {stat.number}
+                  </div>
+                  
+                  <div className="text-lg font-semibold text-gray-800 mb-1">
+                    {stat.label}
+                  </div>
+                  
+                  <div className="text-sm text-gray-600">
+                    {stat.description}
+                  </div>
                 </div>
               </motion.div>
             )
