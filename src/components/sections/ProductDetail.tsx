@@ -48,7 +48,7 @@ export default function ProductDetail({ product, onClose }: ProductDetailProps) 
     },
     {
       icon: <Recycle className="h-6 w-6" />,
-      title: '친환경 소재',
+      title: '고품질 원료 소재',
       description: 'BPA-free PP 플라스틱, 100% 재활용 가능'
     },
     {
@@ -130,7 +130,7 @@ export default function ProductDetail({ product, onClose }: ProductDetailProps) 
               </div>
 
               {/* 썸네일 갤러리 */}
-              <div className="grid grid-cols-5 gap-3 max-h-40 overflow-y-auto">
+              <div className="grid grid-cols-5 gap-3 max-h-48 overflow-y-auto">
                 {productImages.map((image, index) => (
                   <button
                     key={index}
@@ -140,12 +140,13 @@ export default function ProductDetail({ product, onClose }: ProductDetailProps) 
                         ? 'border-primary-500 ring-2 ring-primary-300 scale-105' 
                         : 'border-gray-200 hover:border-gray-400'
                     }`}
+                    style={{ height: '80px', width: '80px' }}
                   >
                     <Image
                       src={image}
                       alt={`${product.name} 이미지 ${index + 1}`}
-                      width={100}
-                      height={100}
+                      width={80}
+                      height={80}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                     />
                   </button>

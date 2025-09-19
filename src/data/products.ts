@@ -35,13 +35,13 @@ export const products: Product[] = [
       '각 칸 독립 분리 가능',
       '편리한 손잡이 디자인',
       '미끄럼 방지 바닥',
-      '친환경 소재 사용',
+      '고품질 원료 소재 사용',
       '좁은 공간 최적화',
       '가정용/업소용 겸용'
     ],
     specifications: {
       capacity: '각 칸 20L (총 40L)',
-      material: 'PP 플라스틱 (친환경, BPA-free)',
+      material: 'PP 플라스틱 (고품질 원료, BPA-free)',
       dimensions: '410 × 225 × 760mm',
       weight: '4.8kg',
       colors: ['화이트', '베이지', '그레이', '그라데이션']
@@ -77,13 +77,13 @@ export const products: Product[] = [
       '각 칸 독립 분리 가능',
       '편리한 손잡이 디자인',
       '미끄럼 방지 바닥',
-      '친환경 소재 사용',
+      '고품질 원료 소재 사용',
       '냄새 차단 밀폐 설계',
       '가정용/업소용 겸용'
     ],
     specifications: {
       capacity: '각 칸 20L (총 60L)',
-      material: 'PP 플라스틱 (친환경, BPA-free)',
+      material: 'PP 플라스틱 (고품질 원료, BPA-free)',
       dimensions: '410 × 225 × 1115mm',
       weight: '7kg',
       colors: ['화이트', '베이지', '그레이', '그라데이션']

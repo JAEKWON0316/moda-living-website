@@ -37,26 +37,41 @@ export default function ProductDetailsSection() {
 
           {/* 상세 이미지들 - 세로 일렬 배치 */}
           <div className="max-w-4xl mx-auto space-y-8">
-            {detailImages.map((imageSrc, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="relative group"
-              >
-                <div className="relative w-full bg-white rounded-3xl overflow-hidden shadow-xl">
-                  <Image
-                    src={imageSrc}
-                    alt={`모다리빙 상세정보 ${index + 1}`}
-                    width={800}
-                    height={600}
-                    className="w-full h-auto transition-transform duration-300"
-                  />
-                </div>
-              </motion.div>
-            ))}
+            {detailImages.map((imageSrc, index) => {
+              // 7,8,9번 이미지(인덱스 6,7,8)는 간격 없이 이어서 표시
+              const isGroupedImage = index >= 6 && index <= 8;
+              const isFirstInGroup = index === 6;
+              const isLastInGroup = index === 8;
+              
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className={`relative group ${isGroupedImage && !isFirstInGroup ? '-mt-8' : ''}`}
+                >
+                  <div className={`relative w-full bg-white overflow-hidden shadow-xl ${
+                    isGroupedImage 
+                      ? isFirstInGroup 
+                        ? 'rounded-t-3xl' 
+                        : isLastInGroup 
+                          ? 'rounded-b-3xl' 
+                          : 'rounded-none'
+                      : 'rounded-3xl'
+                  }`}>
+                    <Image
+                      src={imageSrc}
+                      alt={`모다리빙 상세정보 ${index + 1}`}
+                      width={800}
+                      height={600}
+                      className="w-full h-auto transition-transform duration-300"
+                    />
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

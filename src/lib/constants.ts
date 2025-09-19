@@ -12,7 +12,7 @@ export const SITE_CONFIG = {
     '쓰레기통',
     '수납함',
     '모다리빙',
-    '친환경',
+    '고품질 원료 사용',
     '디자인',
     '스택형',
     '공간절약',
@@ -149,7 +149,7 @@ export const FAQ_DATA = [
   {
     id: 4,
     question: '어떤 소재로 만들어졌나요?',
-    answer: '친환경 PP 플라스틱 소재로 제작되었으며, BPA-free 인증을 받은 안전한 소재입니다.'
+    answer: '고품질 원료 PP 플라스틱 소재로 제작되었으며, BPA-free 인증을 받은 안전한 소재입니다.'
   },
   {
     id: 5,
@@ -166,9 +166,9 @@ export const CERTIFICATIONS = [
     description: '한국 안전 기준 적합 인증'
   },
   {
-    name: '친환경 마크',
+    name: '고품질 원료 마크',
     year: '2023',
-    description: '환경부 친환경 제품 인증'
+    description: '환경부 고품질 원료 제품 인증'
   },
   {
     name: '우수 디자인 상품',
