@@ -32,7 +32,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50">
       {/* 3D 배경 요소들 */}
-      <div className="absolute inset-0 overflow-hidden hidden md:block">
+      <div className="absolute inset-0 overflow-hidden">
         <motion.div
           className="absolute -top-10 -left-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
           animate={{

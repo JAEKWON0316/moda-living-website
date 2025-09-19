@@ -68,6 +68,11 @@ export const metadata: Metadata = {
       'naver-site-verification': 'naver-verification-code',
     },
   },
+  other: {
+    'theme-color': '#ffffff',
+    'msapplication-TileColor': '#ffffff',
+    'apple-mobile-web-app-status-bar-style': 'default',
+  },
 }
 
 // 구조화된 데이터 (JSON-LD)

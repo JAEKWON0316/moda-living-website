@@ -11,6 +11,8 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    background-color: white;
+    overscroll-behavior: contain;
   }
   
   body {
@@ -19,6 +21,8 @@
     font-feature-settings: 'rlig' 1, 'calt' 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: white;
+    overscroll-behavior: contain;
   }
 
   /* Remove default margins and improve typography */
