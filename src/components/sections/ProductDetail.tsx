@@ -130,7 +130,7 @@ export default function ProductDetail({ product, onClose }: ProductDetailProps) 
               </div>
 
               {/* 썸네일 갤러리 */}
-              <div className="grid grid-cols-5 gap-1 max-h-48 overflow-y-auto">
+              <div className="grid grid-cols-5 gap-0.5 max-h-48 overflow-y-auto">
                 {productImages.map((image, index) => (
                   <button
                     key={index}
@@ -140,7 +140,7 @@ export default function ProductDetail({ product, onClose }: ProductDetailProps) 
                         ? 'border-primary-500 ring-2 ring-primary-300 scale-105' 
                         : 'border-gray-200 hover:border-gray-400'
                     }`}
-                    style={{ height: '80px', width: '80px' }}
+                    style={{ height: '80px', width: '100px' }}
                   >
                     <Image
                       src={image}

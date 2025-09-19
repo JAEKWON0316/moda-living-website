@@ -24,40 +24,45 @@ const stats = [
   },
   {
     icon: TrendingUp,
-    number: '5년',
-    label: '품질 보증',
-    description: '무상 A/S 지원'
+    number: '100+',
+    label: '고객 리뷰',
+    description: '신뢰감 있는 후기'
   }
 ]
 
 const timeline = [
   {
-    year: '2019',
+    year: '2024',
     title: '모다리빙 브랜드 런칭',
     description: '최고급 원료 생활용품 전문 브랜드로 시작'
   },
   {
-    year: '2020',
+    year: '2024',
+    title: '공간효율성과 디자인 특허 출원',
+    description: '혁신적인 스택형 디자인으로 특허 출원'
+  },
+  {
+    year: '2024',
+    title: '유해물질 및 하중 테스트 완료',
+    description: '공신력 있는 기관의 안전성·내구성 인증 획득'
+  },
+  {
+    year: '2025.07',
     title: '첫 번째 분리수거함 출시',
     description: '혁신적인 스택형 디자인으로 시장 진입'
   },
   {
-    year: '2021',
+    year: '2025.08',
     title: '온라인 판매 확대',
     description: '네이버 스마트스토어 공식 입점'
   },
   {
-    year: '2022',
+    year: '2025.10',
     title: '제품 라인업 확장',
     description: '다양한 크기와 용도의 제품군 출시'
   },
   {
-    year: '2023',
-    title: '최고급 원료 인증 획득',
-    description: 'KC 안전 인증 및 최고급 원료 마크 획득'
-  },
-  {
-    year: '2024',
+    year: '2025~',
     title: '글로벌 진출 준비',
     description: '해외 시장 진출을 위한 기반 구축'
   }

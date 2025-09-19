@@ -88,7 +88,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h4 className="text-lg font-semibold mb-6">회사</h4>
+            <h4 className="text-lg font-semibold gradient-text mb-6">회사</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -111,7 +111,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4 className="text-lg font-semibold mb-6">고객 지원</h4>
+            <h4 className="text-lg font-semibold gradient-text mb-6">고객 지원</h4>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
@@ -144,7 +144,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h4 className="text-lg font-semibold mb-6">법적 정보</h4>
+            <h4 className="text-lg font-semibold gradient-text mb-6">법적 정보</h4>
             <ul className="space-y-3 mb-6">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>

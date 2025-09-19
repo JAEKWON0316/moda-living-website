@@ -36,7 +36,7 @@ export default function ProductDetailsSection() {
           </motion.div>
 
           {/* 상세 이미지들 - 세로 일렬 배치 */}
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-4xl mx-auto space-y-3">
             {detailImages.map((imageSrc, index) => {
               // 7,8,9번 이미지(인덱스 6,7,8)는 간격 없이 이어서 표시
               const isGroupedImage = index >= 6 && index <= 8;
