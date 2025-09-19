@@ -41,7 +41,7 @@ export const products: Product[] = [
     ],
     specifications: {
       capacity: '각 칸 20L (총 40L)',
-      material: 'PP 플라스틱 (고품질 원료, BPA-free)',
+      material: 'PP 플라스틱 (고품질 원료, 코폴리머)',
       dimensions: '410 × 225 × 760mm',
       weight: '4.8kg',
       colors: ['화이트', '베이지', '그레이', '그라데이션']
@@ -83,7 +83,7 @@ export const products: Product[] = [
     ],
     specifications: {
       capacity: '각 칸 20L (총 60L)',
-      material: 'PP 플라스틱 (고품질 원료, BPA-free)',
+      material: 'PP 플라스틱 (고품질 원료, 코폴리머)',
       dimensions: '410 × 225 × 1115mm',
       weight: '7kg',
       colors: ['화이트', '베이지', '그레이', '그라데이션']
