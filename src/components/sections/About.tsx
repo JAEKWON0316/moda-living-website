@@ -113,9 +113,8 @@ export default function About() {
                       className="relative pl-6 border-l-4 border-stone-300/50"
                     >
                       <p className="font-medium text-gray-800">
-                        모다리빙은 '모으다와 리빙을 합친' 의미로, 현대인의 라이프스타일에 맞는 
-                        <br className="hidden lg:block" />
-                        실용적이고
+                        모다리빙은 '모으다와 리빙을 합친' 의미로, 현대인의 라이프스타일에 맞는                    
+                        실용적이고&nbsp;
                         <br className="hidden lg:block" /> 
                         아름다운 생활용품을 만듭니다.
                       </p>
