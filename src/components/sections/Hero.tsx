@@ -194,12 +194,19 @@ export default function Hero() {
                     src="/videos/products/moda-hero-video.mp4"
                     className="w-full h-full object-cover"
                     muted
-                    preload="metadata"
+                    preload="auto"
                     poster="/images/products/product-main1.jpg"
-                    onLoadedMetadata={(e) => {
+                    onLoadedData={(e) => {
                       // 첫 프레임을 썸네일로 설정
                       const video = e.target as HTMLVideoElement;
-                      video.currentTime = 1;
+                      video.currentTime = 0.1;
+                    }}
+                    onCanPlay={(e) => {
+                      // 비디오가 재생 가능할 때 첫 프레임 설정
+                      const video = e.target as HTMLVideoElement;
+                      if (video.currentTime === 0) {
+                        video.currentTime = 0.1;
+                      }
                     }}
                   />
                   
@@ -217,7 +224,7 @@ export default function Hero() {
 
                   {/* 플로팅 통계 요소들 - PC에서만 표시 */}
                   <motion.div
-                    className="absolute -top-4 -left-4 lg:-top-6 lg:-left-6 glass-morphism p-3 lg:p-4 rounded-2xl shadow-lg hidden xl:block"
+                    className="absolute top-4 left-4 lg:top-6 lg:left-6 glass-morphism p-3 lg:p-4 rounded-2xl shadow-lg hidden xl:block"
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1.2 }}
@@ -227,7 +234,7 @@ export default function Hero() {
                   </motion.div>
                   
                   <motion.div
-                    className="absolute -top-4 -right-4 lg:-top-6 lg:-right-6 glass-morphism p-3 lg:p-4 rounded-2xl shadow-lg hidden xl:block"
+                    className="absolute top-4 right-4 lg:top-6 lg:right-6 glass-morphism p-3 lg:p-4 rounded-2xl shadow-lg hidden xl:block"
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1.4 }}
