@@ -199,8 +199,8 @@ export default function Hero() {
                   {/* 정적 썸네일 이미지 (가장 확실한 방법) */}
                   <div className="relative w-full h-full">
                     <Image
-                      src="/images/products/product-main1.jpg"
-                      alt="모다리빙 분리수거함 썸네일"
+                      src="/images/products/hero-thumbnail.jpg"
+                      alt="모다리빙 분리수거함 - 모던하고 실용적인 디자인"
                       fill
                       className="object-cover"
                       priority
