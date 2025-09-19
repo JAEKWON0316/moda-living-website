@@ -119,6 +119,18 @@ export default function About() {
                   ease: "linear"
                 }}
               />
+              <motion.div
+                className="absolute top-1/4 left-1/4 w-28 h-28 bg-stone-200/35 rounded-full mix-blend-multiply filter blur-lg"
+                animate={{
+                  x: [0, -25, 0],
+                  y: [0, 35, 0],
+                }}
+                transition={{
+                  duration: 18,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              />
             </div>
 
             <div className="relative z-10">
