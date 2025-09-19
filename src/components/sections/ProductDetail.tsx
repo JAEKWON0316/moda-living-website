@@ -274,13 +274,13 @@ export default function ProductDetail({ product, onClose }: ProductDetailProps) 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
                   onClick={() => setIsWishlisted(!isWishlisted)}
-                  className={`flex-shrink-0 p-3 rounded-full border-2 transition-colors ${
+                  className={`flex-shrink-0 p-2 md:p-3 rounded-full border-2 transition-colors ${
                     isWishlisted
                       ? 'border-primary-500 bg-primary-50 text-primary-600'
                       : 'border-gray-300 text-gray-600 hover:border-primary-500 hover:text-primary-600'
                   }`}
                 >
-                  <Heart className={`h-5 w-5 ${isWishlisted ? 'fill-current' : ''}`} />
+                  <Heart className={`h-4 w-4 md:h-5 md:w-5 ${isWishlisted ? 'fill-current' : ''}`} />
                 </button>
                 
                 <a

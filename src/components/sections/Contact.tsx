@@ -121,7 +121,7 @@ export default function Contact() {
                             {info.content}
                           </Link>
                         ) : (
-                          <div className="text-lg text-gray-800 font-medium mb-1">
+                          <div className="text-lg text-primary-600 hover:text-primary-700 font-medium block mb-1">
                             {info.content}
                           </div>
                         )}
