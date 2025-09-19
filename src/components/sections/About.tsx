@@ -114,7 +114,10 @@ export default function About() {
                     >
                       <p className="font-medium text-gray-800">
                         모다리빙은 '모으다와 리빙을 합친' 의미로, 현대인의 라이프스타일에 맞는 
-                        실용적이고 아름다운 생활용품을 만듭니다.
+                        <br className="hidden lg:block" />
+                        실용적이고
+                        <br className="hidden lg:block" /> 
+                        아름다운 생활용품을 만듭니다.
                       </p>
                     </motion.div>
                     
