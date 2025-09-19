@@ -9,7 +9,7 @@ import { useState } from 'react'
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
-  const [videoLoaded, setVideoLoaded] = useState(false)
+  const [isVideoReady, setIsVideoReady] = useState(false)
 
   const videos = [
     '/videos/products/moda-hero-video.mp4',
@@ -30,44 +30,10 @@ export default function Hero() {
     setCurrentVideoIndex((prev) => (prev - 1 + videos.length) % videos.length)
   }
 
-  // 비디오 썸네일 로딩 최적화
-  const handleVideoLoadStart = (e: React.SyntheticEvent<HTMLVideoElement>) => {
-    const video = e.target as HTMLVideoElement;
-    
-    // 즉시 첫 프레임으로 이동
-    setTimeout(() => {
-      if (video && !video.played.length) {
-        video.currentTime = 0.5;
-      }
-    }, 100);
-  }
-
-  const handleVideoLoadedData = (e: React.SyntheticEvent<HTMLVideoElement>) => {
-    const video = e.target as HTMLVideoElement;
-    
-    // 데이터 로드 후 썸네일 설정
-    setTimeout(() => {
-      if (video && !video.played.length) {
-        video.currentTime = 0.5;
-        setVideoLoaded(true);
-      }
-    }, 200);
-  }
-
-  const handleVideoCanPlay = (e: React.SyntheticEvent<HTMLVideoElement>) => {
-    const video = e.target as HTMLVideoElement;
-    
-    // 재생 가능할 때 최종 썸네일 설정
-    setTimeout(() => {
-      if (video && !video.played.length) {
-        video.currentTime = 0.5;
-        setVideoLoaded(true);
-      }
-    }, 300);
-  }
-
-  const handleVideoSeeked = () => {
-    setVideoLoaded(true);
+  // 영상 재생 시작
+  const handlePlayVideo = () => {
+    setShowVideo(true)
+    setIsVideoReady(true)
   }
 
   return (
@@ -230,56 +196,65 @@ export default function Hero() {
             <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] bg-gradient-to-br from-white to-gray-100 rounded-3xl shadow-2xl overflow-hidden">
               {!showVideo ? (
                 <>
-                  {/* 영상 썸네일 (단순화) */}
-                  <video
-                    src="/videos/products/moda-hero-video.mp4"
-                    className="w-full h-full object-cover"
-                    muted
-                    playsInline
-                    preload="auto"
-                    poster="/images/products/product-main1.jpg"
-                    autoPlay={false}
-                    onLoadStart={(e) => {
-                      const video = e.target as HTMLVideoElement;
-                      setTimeout(() => video.currentTime = 0.1, 100);
-                    }}
-                    onLoadedData={(e) => {
-                      const video = e.target as HTMLVideoElement;
-                      video.currentTime = 0.1;
-                    }}
-                    onCanPlay={(e) => {
-                      const video = e.target as HTMLVideoElement;
-                      video.currentTime = 0.1;
-                    }}
-                  />
-                  
-                  {/* 비디오 재생 버튼 */}
-                  <motion.button
-                    onClick={() => setShowVideo(true)}
-                    className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors z-20"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/90 rounded-full shadow-lg">
-                      <Play className="h-4 w-4 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-primary-600 ml-1" />
+                  {/* 정적 썸네일 이미지 (가장 확실한 방법) */}
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/images/products/product-main1.jpg"
+                      alt="모다리빙 분리수거함 썸네일"
+                      fill
+                      className="object-cover"
+                      priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                    />
+                    
+                    {/* 썸네일 위에 비디오 플레이 오버레이 */}
+                    <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+                      <motion.button
+                        onClick={handlePlayVideo}
+                        className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/95 backdrop-blur-sm rounded-full shadow-2xl hover:bg-white transition-all duration-300"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 1, duration: 0.5 }}
+                      >
+                        <Play className="h-4 w-4 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-primary-600 ml-1" />
+                      </motion.button>
                     </div>
-                  </motion.button>
+
+                    {/* 영상 정보 배지 */}
+                    <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm text-white px-3 py-2 rounded-lg text-sm font-medium">
+                      <span className="flex items-center gap-2">
+                        <Play className="h-4 w-4" />
+                        제품 소개 영상
+                      </span>
+                    </div>
+                  </div>
                 </>
               ) : (
-                <div className="relative w-full h-full">
-                  {/* 실제 영상 재생 */}
-                  <video
-                    src={videos[currentVideoIndex]}
-                    className="w-full h-full object-cover"
-                    controls
-                    autoPlay
-                    muted
-                  />
+                <div className="relative w-full h-full bg-black">
+                  {/* 실제 영상 재생 - 클릭 시에만 로드 */}
+                  {isVideoReady && (
+                    <video
+                      key={currentVideoIndex} // 영상 변경 시 재렌더링
+                      src={videos[currentVideoIndex]}
+                      className="w-full h-full object-cover"
+                      controls
+                      autoPlay
+                      muted
+                      preload="metadata"
+                      onLoadStart={() => console.log('Video loading started')}
+                      onCanPlay={() => console.log('Video ready to play')}
+                    />
+                  )}
                   
                   {/* 영상 닫기 버튼 */}
                   <button
-                    onClick={() => setShowVideo(false)}
-                    className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors text-lg sm:text-xl"
+                    onClick={() => {
+                      setShowVideo(false)
+                      setIsVideoReady(false)
+                    }}
+                    className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-black/70 backdrop-blur-sm text-white rounded-full flex items-center justify-center hover:bg-black/90 transition-colors text-lg sm:text-xl z-10"
                   >
                     ×
                   </button>
@@ -287,25 +262,23 @@ export default function Hero() {
                   {/* 영상 네비게이션 */}
                   <button
                     onClick={prevVideo}
-                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors text-lg sm:text-xl"
+                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-black/70 backdrop-blur-sm text-white rounded-full flex items-center justify-center hover:bg-black/90 transition-colors text-lg sm:text-xl z-10"
                   >
                     ←
                   </button>
                   <button
                     onClick={nextVideo}
-                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors text-lg sm:text-xl"
+                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-black/70 backdrop-blur-sm text-white rounded-full flex items-center justify-center hover:bg-black/90 transition-colors text-lg sm:text-xl z-10"
                   >
                     →
                   </button>
 
                   {/* 영상 카운터 */}
-                  <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-black/50 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm">
+                  <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-black/70 backdrop-blur-sm text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm">
                     {currentVideoIndex + 1} / {videos.length}
                   </div>
                 </div>
               )}
-              
-              {/* 플로팅 요소들 */}
             </div>
           </motion.div>
         </div>
