@@ -25,7 +25,7 @@ export default function ShoppingMalls() {
         </motion.div>
 
         {/* 쇼핑몰 그리드 */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* 네이버 */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

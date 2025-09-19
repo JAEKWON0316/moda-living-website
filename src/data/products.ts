@@ -26,8 +26,8 @@ export const products: Product[] = [
     name: '모다리빙 스택형 분리수거함 2단',
     description: '컴팩트한 공간에 최적화된 2단 분리수거함으로, 일반/재활용 분리수거를 깔끔하게 해결합니다. 가정용부터 카페, 사무실까지 다양한 공간에 적합한 모던한 디자인과 실용성을 겸비한 필수 아이템입니다.',
     price: 38000,
-    originalPrice: 70000,
-    discount: 46,
+    originalPrice: 69000,
+    discount: 44,
     category: ['home', 'office'],
     features: [
       '컴팩트한 2단 구조',
@@ -67,8 +67,8 @@ export const products: Product[] = [
     name: '모다리빙 스택형 분리수거함 3단',
     description: '완벽한 분리수거 솔루션을 제공하는 3단 분리수거함입니다. 일반/재활용/음식물 쓰레기를 체계적으로 분리하여 가정의 주방부터 레스토랑, 카페까지 깔끔한 환경을 만들어줍니다.',
     price: 55000,
-    originalPrice: 102000,
-    discount: 46,
+    originalPrice: 99000,
+    discount: 44,
     category: ['home', 'office'],
     features: [
       '완벽한 3단 분리수거 시스템',

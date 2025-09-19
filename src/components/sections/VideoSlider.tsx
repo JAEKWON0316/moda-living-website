@@ -186,15 +186,15 @@ export default function VideoSlider() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-5xl mx-auto"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-2 sm:gap-3 md:gap-4">
             {videos.map((video, index) => (
               <motion.button
                 key={index}
                 onClick={() => selectVideo(index)}
                 className={`relative aspect-video rounded-lg overflow-hidden border-2 transition-all duration-300 ${
                   currentIndex === index 
-                    ? 'border-primary-500 scale-105' 
-                    : 'border-gray-200 hover:border-gray-300'
+                    ? 'border-primary-500 scale-105 shadow-lg' 
+                    : 'border-gray-200 hover:border-gray-300 hover:shadow-md'
                 }`}
                 whileHover={{ scale: currentIndex === index ? 1.05 : 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -204,20 +204,21 @@ export default function VideoSlider() {
                   className="w-full h-full object-cover"
                   muted
                   preload="metadata"
+                  poster=""
                 />
                 
                 {/* 재생 아이콘 오버레이 */}
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                  <div className="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center">
-                    <Play className="h-4 w-4 text-gray-800 ml-0.5" />
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-white/90 rounded-full flex items-center justify-center">
+                    <Play className="h-3 w-3 sm:h-4 sm:w-4 text-gray-800 ml-0.5" />
                   </div>
                 </div>
 
                 {/* 선택된 비디오 표시 */}
                 {currentIndex === index && (
-                  <div className="absolute inset-0 border-2 border-primary-500 rounded-lg">
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
-                      <Play className="h-3 w-3 text-white" />
+                  <div className="absolute inset-0 border-2 border-primary-500 rounded-lg bg-primary-50/20">
+                    <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-4 h-4 sm:w-6 sm:h-6 bg-primary-500 rounded-full flex items-center justify-center">
+                      <Play className="h-2 w-2 sm:h-3 sm:w-3 text-white" />
                     </div>
                   </div>
                 )}
@@ -226,11 +227,11 @@ export default function VideoSlider() {
           </div>
 
           {/* 비디오 제목 */}
-          <div className="text-center mt-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+          <div className="text-center mt-4 sm:mt-6">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
               {videos[currentIndex].title}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-sm sm:text-base text-gray-600 px-4">
               {videos[currentIndex].description}
             </p>
           </div>

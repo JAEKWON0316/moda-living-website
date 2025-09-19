@@ -77,7 +77,7 @@ export default function Products() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 lg:gap-8"
         >
           {filteredProducts.map((product, index) => (
             <motion.div
@@ -93,7 +93,7 @@ export default function Products() {
             >
               <div className="bg-white rounded-3xl shadow-lg overflow-hidden transition-all duration-300 group-hover:shadow-2xl">
                 {/* 제품 이미지 영역 */}
-                <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
                   {/* 실제 제품 이미지 */}
                   <Image
                     src={product.images[0]}

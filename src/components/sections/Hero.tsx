@@ -186,7 +186,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative w-full h-96 lg:h-[500px] bg-gradient-to-br from-white to-gray-100 rounded-3xl shadow-2xl overflow-hidden">
+            <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] bg-gradient-to-br from-white to-gray-100 rounded-3xl shadow-2xl overflow-hidden">
               {!showVideo ? (
                 <>
                   {/* 영상 썸네일로 변경 */}
@@ -195,6 +195,12 @@ export default function Hero() {
                     className="w-full h-full object-cover"
                     muted
                     preload="metadata"
+                    poster="/images/products/product-main1.jpg"
+                    onLoadedMetadata={(e) => {
+                      // 첫 프레임을 썸네일로 설정
+                      const video = e.target as HTMLVideoElement;
+                      video.currentTime = 1;
+                    }}
                   />
                   
                   {/* 비디오 재생 버튼 */}
@@ -204,10 +210,31 @@ export default function Hero() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <div className="flex items-center justify-center w-20 h-20 bg-white/90 rounded-full shadow-lg">
-                      <Play className="h-8 w-8 text-primary-600 ml-1" />
+                    <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/90 rounded-full shadow-lg">
+                      <Play className="h-4 w-4 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-primary-600 ml-1" />
                     </div>
                   </motion.button>
+
+                  {/* 플로팅 통계 요소들 - PC에서만 표시 */}
+                  <motion.div
+                    className="absolute -top-4 -left-4 lg:-top-6 lg:-left-6 glass-morphism p-3 lg:p-4 rounded-2xl shadow-lg hidden xl:block"
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1.2 }}
+                  >
+                    <div className="text-xs lg:text-sm font-semibold text-primary-600 mb-1">공간 절약</div>
+                    <div className="text-xl lg:text-2xl font-bold text-gray-900">70%</div>
+                  </motion.div>
+                  
+                  <motion.div
+                    className="absolute -top-4 -right-4 lg:-top-6 lg:-right-6 glass-morphism p-3 lg:p-4 rounded-2xl shadow-lg hidden xl:block"
+                    initial={{ opacity: 0, x: 30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1.4 }}
+                  >
+                    <div className="text-xs lg:text-sm font-semibold text-primary-600 mb-1">친환경</div>
+                    <div className="text-xl lg:text-2xl font-bold text-gray-900">100%</div>
+                  </motion.div>
                 </>
               ) : (
                 <div className="relative w-full h-full">
@@ -223,7 +250,7 @@ export default function Hero() {
                   {/* 영상 닫기 버튼 */}
                   <button
                     onClick={() => setShowVideo(false)}
-                    className="absolute top-4 right-4 w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
+                    className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors text-lg sm:text-xl"
                   >
                     ×
                   </button>
@@ -231,19 +258,19 @@ export default function Hero() {
                   {/* 영상 네비게이션 */}
                   <button
                     onClick={prevVideo}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
+                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors text-lg sm:text-xl"
                   >
                     ←
                   </button>
                   <button
                     onClick={nextVideo}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
+                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors text-lg sm:text-xl"
                   >
                     →
                   </button>
 
                   {/* 영상 카운터 */}
-                  <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                  <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-black/50 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm">
                     {currentVideoIndex + 1} / {videos.length}
                   </div>
                 </div>
@@ -251,27 +278,6 @@ export default function Hero() {
               
               {/* 플로팅 요소들 */}
             </div>
-
-            {/* 제품 특징 카드들 */}
-            <motion.div
-              className="absolute -bottom-6 -left-6 glass-morphism p-4 rounded-2xl shadow-lg"
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.2 }}
-            >
-              <div className="text-sm font-semibold text-primary-600 mb-1">공간 절약</div>
-              <div className="text-2xl font-bold text-gray-900">70%</div>
-            </motion.div>
-
-            <motion.div
-              className="absolute -top-6 -right-6 glass-morphism p-4 rounded-2xl shadow-lg"
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.4 }}
-            >
-              <div className="text-sm font-semibold text-primary-600 mb-1">친환경</div>
-              <div className="text-2xl font-bold text-gray-900">100%</div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
