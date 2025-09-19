@@ -76,7 +76,7 @@ export default function Footer() {
                 KC 안전인증
               </div>
               <div className="px-3 py-2 bg-primary-700 rounded-lg text-xs text-white">
-                친환경 인증
+                최고급 원료 인증
               </div>
             </div>
           </motion.div>

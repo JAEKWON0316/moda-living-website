@@ -1,7 +1,7 @@
 // 사이트 기본 정보
 export const SITE_CONFIG = {
   name: '모다리빙',
-  title: '모다리빙 분리수거함 | 친환경 디자인 수납함 전문브랜드',
+  title: '모다리빙 분리수거함 | 최고급 원료 디자인 수납함 전문브랜드',
   description: '세련된 디자인과 실용성을 겸비한 모다리빙 분리수거함. 가정용부터 업소용까지 다양한 크기와 스타일로 깔끔한 분리수거 환경을 만들어보세요.',
   url: 'https://moda-living.vercel.app',
   ogImage: 'https://moda-living.vercel.app/images/og-image.jpg',

@@ -34,7 +34,7 @@ const timeline = [
   {
     year: '2019',
     title: '모다리빙 브랜드 런칭',
-    description: '친환경 생활용품 전문 브랜드로 시작'
+    description: '최고급 원료 생활용품 전문 브랜드로 시작'
   },
   {
     year: '2020',
@@ -53,8 +53,8 @@ const timeline = [
   },
   {
     year: '2023',
-    title: '친환경 인증 획득',
-    description: 'KC 안전 인증 및 친환경 마크 획득'
+    title: '최고급 원료 인증 획득',
+    description: 'KC 안전 인증 및 최고급 원료 마크 획득'
   },
   {
     year: '2024',
@@ -81,7 +81,7 @@ export default function About() {
             
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                모다리빙은 '모던한 리빙'이라는 의미로, 현대인의 라이프스타일에 맞는 
+                모다리빙은 '모으다와 리빙을 합친' 의미로, 현대인의 라이프스타일에 맞는 
                 실용적이고 아름다운 생활용품을 만듭니다.
               </p>
               
@@ -106,9 +106,9 @@ export default function About() {
               </div>
               
               <div className="p-4 bg-primary-50 rounded-2xl">
-                <h4 className="font-bold text-primary-800 mb-2">친환경</h4>
+                <h4 className="font-bold text-primary-800 mb-2">최고급 원료</h4>
                 <p className="text-sm text-primary-600">
-                  100% 재활용 가능한 소재로 지구 환경을 생각합니다.
+                  고품질 원료 사용으로 튼튼한 내구성을 자랑합니다.
                 </p>
               </div>
               

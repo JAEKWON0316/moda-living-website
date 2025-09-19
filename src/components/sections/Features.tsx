@@ -12,9 +12,9 @@ const features = [
   },
   {
     icon: '♻️',
-    title: '친환경 소재',
-    description: '100% 재활용 가능한 친환경 PP 플라스틱을 사용합니다.',
-    details: ['재활용 가능 소재', 'BPA-free 인증', '환경 인증 획득']
+    title: '최고급 원료 소재',
+    description: '고품질 원료를 사용함으로 최고의 내구성을 자랑합니다.',
+    details: ['유해물질 테스트 완료', '100% 재활용 가능', '물세척 가능 소재']
   },
   {
     icon: '🎨',
@@ -226,12 +226,12 @@ export default function Features() {
                   <td className="py-4 px-6 text-gray-900 font-medium">내구성</td>
                   <td className="py-4 px-6 text-center">
                     <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">
-                      <Check className="h-4 w-4 mr-1" /> 5년 보증
+                      <Check className="h-4 w-4 mr-1" /> 매우 우수
                     </span>
                   </td>
                   <td className="py-4 px-6 text-center">
                     <span className="inline-flex items-center px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">
-                      1년
+                      펑범
                     </span>
                   </td>
                 </tr>

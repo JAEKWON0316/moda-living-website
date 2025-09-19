@@ -8,13 +8,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: '모다리빙 분리수거함 | 친환경 디자인 수납함 전문브랜드',
+    default: '모다리빙 분리수거함 | 최고급 원료 디자인 수납함 전문브랜드',
     template: '%s | 모다리빙'
   },
   description: '세련된 디자인과 실용성을 겸비한 모다리빙 분리수거함. 가정용부터 업소용까지 다양한 크기와 스타일로 깔끔한 분리수거 환경을 만들어보세요.',
   keywords: [
     '분리수거함', '재활용함', '쓰레기통', '수납함', '모다리빙', 
-    '친환경', '디자인', '스택형', '공간절약', '모던 인테리어',
+    '최고급 원료 사용', '디자인', '스택형', '공간절약', '모던 인테리어',
     'MODA LIVING', '가정용 분리수거함', '업소용 분리수거함'
   ],
   authors: [{ name: '모다리빙' }],
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: '모다리빙 분리수거함 | 친환경 디자인 수납함 전문브랜드',
-    description: '세련된 디자인과 실용성을 겸비한 모다리빙 분리수거함. 스택형 구조로 공간을 절약하고 친환경 소재로 지구를 생각합니다.',
+    title: '모다리빙 분리수거함 | 최고급 원료 디자인 수납함 전문브랜드',
+    description: '세련된 디자인과 실용성을 겸비한 모다리빙 분리수거함. 스택형 구조로 공간을 절약하고 최고급 원료 소재로 지구를 생각합니다.',
     url: 'https://moda-living.vercel.app',
     siteName: '모다리빙',
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: '모다리빙 분리수거함 - 모던한 디자인의 친환경 분리수거 솔루션',
+        alt: '모다리빙 분리수거함 - 모던한 디자인의 최고급 원료 분리수거 솔루션',
       },
     ],
     locale: 'ko_KR',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '모다리빙 분리수거함 | 친환경 디자인 수납함',
+    title: '모다리빙 분리수거함 | 최고급 원료 디자인 수납함',
     description: '세련된 디자인과 실용성을 겸비한 분리수거함',
     images: ['/images/og-image.jpg'],
   },

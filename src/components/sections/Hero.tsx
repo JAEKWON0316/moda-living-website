@@ -116,7 +116,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-lg"
             >
-              <span className="text-primary-600 font-semibold text-sm">🏆 2024 친환경 인증</span>
+              <span className="text-primary-600 font-semibold text-sm">🏆고품질 원료 사용</span>
             </motion.div>
 
             <motion.h1 
@@ -154,7 +154,7 @@ export default function Hero() {
             >
               {[
                 '스택형 공간절약',
-                '친환경 소재',
+                '최고급 원료 사용',
                 '모던 디자인',
                 '다용도 활용'
               ].map((feature, index) => (

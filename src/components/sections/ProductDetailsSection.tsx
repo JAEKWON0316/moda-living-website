@@ -50,7 +50,7 @@ export default function ProductDetailsSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`relative group ${isGroupedImage && !isFirstInGroup ? '-mt-8' : ''}`}
+                  className={`relative group ${isGroupedImage && !isFirstInGroup ? '-mt-24' : ''}`}
                 >
                   <div className={`relative w-full bg-white overflow-hidden shadow-xl ${
                     isGroupedImage 
