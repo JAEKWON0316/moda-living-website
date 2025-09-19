@@ -9,6 +9,7 @@ import { useState } from 'react'
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+  const [videoLoaded, setVideoLoaded] = useState(false)
 
   const videos = [
     '/videos/products/moda-hero-video.mp4',
@@ -27,6 +28,46 @@ export default function Hero() {
 
   const prevVideo = () => {
     setCurrentVideoIndex((prev) => (prev - 1 + videos.length) % videos.length)
+  }
+
+  // 비디오 썸네일 로딩 최적화
+  const handleVideoLoadStart = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = e.target as HTMLVideoElement;
+    
+    // 즉시 첫 프레임으로 이동
+    setTimeout(() => {
+      if (video && !video.played.length) {
+        video.currentTime = 0.5;
+      }
+    }, 100);
+  }
+
+  const handleVideoLoadedData = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = e.target as HTMLVideoElement;
+    
+    // 데이터 로드 후 썸네일 설정
+    setTimeout(() => {
+      if (video && !video.played.length) {
+        video.currentTime = 0.5;
+        setVideoLoaded(true);
+      }
+    }, 200);
+  }
+
+  const handleVideoCanPlay = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = e.target as HTMLVideoElement;
+    
+    // 재생 가능할 때 최종 썸네일 설정
+    setTimeout(() => {
+      if (video && !video.played.length) {
+        video.currentTime = 0.5;
+        setVideoLoaded(true);
+      }
+    }, 300);
+  }
+
+  const handleVideoSeeked = () => {
+    setVideoLoaded(true);
   }
 
   return (
@@ -189,20 +230,40 @@ export default function Hero() {
             <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] bg-gradient-to-br from-white to-gray-100 rounded-3xl shadow-2xl overflow-hidden">
               {!showVideo ? (
                 <>
-                  {/* 정적 썸네일 이미지 */}
-                  <Image
-                    src="/images/products/product-main1.jpg"
-                    alt="모다리빙 분리수거함"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority
+                  {/* 향상된 영상 썸네일 */}
+                  <video
+                    src="/videos/products/moda-hero-video.mp4"
+                    className="w-full h-full object-cover"
+                    muted
+                    playsInline
+                    preload="auto"
+                    poster="/images/products/product-main1.jpg"
+                    onLoadStart={handleVideoLoadStart}
+                    onLoadedData={handleVideoLoadedData}
+                    onCanPlay={handleVideoCanPlay}
+                    onSeeked={handleVideoSeeked}
+                    style={{ 
+                      opacity: videoLoaded ? 1 : 0.8,
+                      transition: 'opacity 0.3s ease'
+                    }}
                   />
+                  
+                  {/* 썸네일이 로드되지 않을 경우 fallback 이미지 */}
+                  {!videoLoaded && (
+                    <Image
+                      src="/images/products/product-main1.jpg"
+                      alt="모다리빙 분리수거함"
+                      fill
+                      className="object-cover absolute inset-0 z-10"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority
+                    />
+                  )}
                   
                   {/* 비디오 재생 버튼 */}
                   <motion.button
                     onClick={() => setShowVideo(true)}
-                    className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors"
+                    className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors z-20"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
