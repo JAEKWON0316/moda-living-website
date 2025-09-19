@@ -230,35 +230,22 @@ export default function Hero() {
             <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] bg-gradient-to-br from-white to-gray-100 rounded-3xl shadow-2xl overflow-hidden">
               {!showVideo ? (
                 <>
-                  {/* 향상된 영상 썸네일 */}
+                  {/* 영상 썸네일 (단순화) */}
                   <video
                     src="/videos/products/moda-hero-video.mp4"
                     className="w-full h-full object-cover"
                     muted
                     playsInline
-                    preload="auto"
+                    preload="metadata"
                     poster="/images/products/product-main1.jpg"
-                    onLoadStart={handleVideoLoadStart}
-                    onLoadedData={handleVideoLoadedData}
-                    onCanPlay={handleVideoCanPlay}
-                    onSeeked={handleVideoSeeked}
-                    style={{ 
-                      opacity: videoLoaded ? 1 : 0.8,
-                      transition: 'opacity 0.3s ease'
+                    onLoadedMetadata={(e) => {
+                      const video = e.target as HTMLVideoElement;
+                      video.currentTime = 0.5;
+                    }}
+                    onError={() => {
+                      console.log('Video loading failed, using poster');
                     }}
                   />
-                  
-                  {/* 썸네일이 로드되지 않을 경우 fallback 이미지 */}
-                  {!videoLoaded && (
-                    <Image
-                      src="/images/products/product-main1.jpg"
-                      alt="모다리빙 분리수거함"
-                      fill
-                      className="object-cover absolute inset-0 z-10"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      priority
-                    />
-                  )}
                   
                   {/* 비디오 재생 버튼 */}
                   <motion.button
