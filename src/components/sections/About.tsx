@@ -80,87 +80,74 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            {/* 텍스트 영역만을 위한 별도 컨테이너 */}
-            <div className="relative mb-8">
-              {/* 베이지색 배경 원형 요소들 - 텍스트 영역에만 제한 */}
-              <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <motion.div
-                  className="absolute top-4 left-4 w-32 h-32 bg-amber-200/40 rounded-full mix-blend-multiply filter blur-xl"
-                  animate={{
-                    x: [0, 30, 0],
-                    y: [0, -20, 0],
-                  }}
-                  transition={{
-                    duration: 15,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
-                <motion.div
-                  className="absolute top-12 right-8 w-24 h-24 bg-stone-300/35 rounded-full mix-blend-multiply filter blur-lg"
-                  animate={{
-                    x: [0, -20, 0],
-                    y: [0, 15, 0],
-                  }}
-                  transition={{
-                    duration: 12,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
-                <motion.div
-                  className="absolute top-32 left-1/4 w-20 h-20 bg-amber-100/45 rounded-full mix-blend-multiply filter blur-md"
-                  animate={{
-                    x: [0, 15, 0],
-                    y: [0, -10, 0],
-                  }}
-                  transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
-                <motion.div
-                  className="absolute top-24 right-1/4 w-28 h-28 bg-stone-200/40 rounded-full mix-blend-multiply filter blur-lg"
-                  animate={{
-                    x: [0, -15, 0],
-                    y: [0, 25, 0],
-                  }}
-                  transition={{
-                    duration: 18,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
-              </div>
-
-              <div className="relative z-10">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                  <span className="gradient-text">모다리빙</span>의 이야기
-                </h2>
+            {/* 트렌디한 텍스트 영역 */}
+            <div className="relative">
+              <div className="relative p-8 rounded-3xl overflow-hidden group">
+                {/* 트렌디한 그라데이션 배경 */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white via-stone-50/60 to-gray-50/80"></div>
+                <div className="absolute inset-0 glass-morphism backdrop-blur-sm border border-white/20 shadow-2xl"></div>
                 
-                <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-                  <p>
-                    모다리빙은 '모으다와 리빙을 합친' 의미로, 현대인의 라이프스타일에 맞는 
-                    실용적이고 아름다운 생활용품을 만듭니다.
-                  </p>
+                {/* 호버 시 글로우 효과 */}
+                <div className="absolute inset-0 bg-gradient-to-br from-stone-400/0 to-stone-600/0 group-hover:from-stone-400/5 group-hover:to-stone-600/5 transition-all duration-700"></div>
+                
+                {/* 장식적 요소 */}
+                <div className="absolute top-6 right-6 w-2 h-2 bg-stone-400/30 rounded-full"></div>
+                <div className="absolute top-12 right-8 w-1 h-1 bg-stone-300/40 rounded-full"></div>
+                <div className="absolute bottom-8 left-6 w-3 h-3 bg-stone-200/30 rounded-full"></div>
+
+                <div className="relative z-10">
+                  <motion.h2 
+                    className="text-4xl md:text-5xl font-bold mb-8 text-gray-900"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                  >
+                    <span className="gradient-text">모다리빙</span>의 이야기
+                  </motion.h2>
                   
-                  <p>
-                    비록 시작한 지 얼마 되지 않은 신생 브랜드이지만, 오랜 시간 축적된 
-                    제조 기술과 노하우를 바탕으로 확실한 품질의 제품을 보장합니다. 
-                    저희는 고객의 신뢰를 최우선으로 생각하며, 모든 제품에 대해 
-                    엄격한 품질 관리를 통해 완벽한 만족을 제공합니다.
-                  </p>
-                  
-                  <p>
-                    단순히 쓰레기를 담는 용기가 아닌, 공간을 아름답게 하고 
-                    환경을 생각하는 지속가능한 제품을 통해 고객의 일상을 변화시킵니다.
-                  </p>
-                  
-                  <p>
-                    우리의 모든 제품은 사용자의 편의성과 환경에 대한 책임을 
-                    동시에 고려하여 설계되었습니다.
-                  </p>
+                  <div className="space-y-8 text-lg text-gray-700 leading-relaxed">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.3 }}
+                      className="relative pl-6 border-l-4 border-stone-300/50"
+                    >
+                      <p className="font-medium text-gray-800">
+                        모다리빙은 '모으다와 리빙을 합친' 의미로, 현대인의 라이프스타일에 맞는 
+                        실용적이고 아름다운 생활용품을 만듭니다.
+                      </p>
+                    </motion.div>
+                    
+                    <motion.p
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                      비록 시작한 지 얼마 되지 않은 신생 브랜드이지만, 오랜 시간 축적된 
+                      제조 기술과 노하우를 바탕으로 확실한 품질의 제품을 보장합니다. 
+                      저희는 고객의 신뢰를 최우선으로 생각하며, 모든 제품에 대해 
+                      엄격한 품질 관리를 통해 완벽한 만족을 제공합니다.
+                    </motion.p>
+                    
+                    <motion.p
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.5 }}
+                    >
+                      단순히 쓰레기를 담는 용기가 아닌, 공간을 아름답게 하고 
+                      환경을 생각하는 지속가능한 제품을 통해 고객의 일상을 변화시킵니다.
+                    </motion.p>
+                    
+                    <motion.p
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.6 }}
+                      className="text-stone-800 font-medium"
+                    >
+                      우리의 모든 제품은 사용자의 편의성과 환경에 대한 책임을 
+                      동시에 고려하여 설계되었습니다.
+                    </motion.p>
+                  </div>
                 </div>
               </div>
             </div>
