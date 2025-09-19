@@ -115,7 +115,7 @@ export default function Reviews() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-16"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -124,12 +124,12 @@ export default function Reviews() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center p-6 rounded-3xl bg-white shadow-lg border border-gray-100"
+              className="text-center p-4 md:p-6 rounded-3xl bg-white shadow-lg border border-gray-100"
             >
-              <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-600 mb-2">
                 {stat.number}<span className="text-gray-400">{stat.suffix}</span>
               </div>
-              <div className="text-gray-600 font-medium">{stat.label}</div>
+              <div className="text-sm md:text-base text-gray-600 font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

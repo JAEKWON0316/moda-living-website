@@ -54,12 +54,12 @@ export default function Products() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex justify-center mb-12"
         >
-          <div className="glass-morphism p-2 rounded-full">
+          <div className="glass-morphism p-1 md:p-2 rounded-full">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`px-4 md:px-6 py-2 md:py-3 text-sm md:text-base rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-primary-600 text-white shadow-lg'
                     : 'text-gray-600 hover:text-primary-600 hover:bg-white/30'

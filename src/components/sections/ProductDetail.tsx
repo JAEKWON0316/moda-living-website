@@ -140,7 +140,7 @@ export default function ProductDetail({ product, onClose }: ProductDetailProps) 
                         ? 'border-primary-500 ring-2 ring-primary-300 scale-105' 
                         : 'border-gray-200 hover:border-gray-400'
                     }`}
-                    style={{ height: '80px', width: '100px' }}
+                    style={{ height: '80px', width: '80px' }}
                   >
                     <Image
                       src={image}

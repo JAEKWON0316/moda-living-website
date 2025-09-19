@@ -13,15 +13,15 @@ const footerLinks = {
   ],
   support: [
     { name: '고객 지원', href: '#contact' },
-    { name: 'A/S 신청', href: '/as' },
-    { name: 'FAQ', href: '/faq' },
-    { name: '사용법 가이드', href: '/guide' }
+    { name: 'A/S 신청', href: '#' },
+    { name: 'FAQ', href: '#' },
+    { name: '사용법 가이드', href: '#' }
   ],
   legal: [
-    { name: '이용약관', href: '/terms' },
-    { name: '개인정보처리방침', href: '/privacy' },
-    { name: '환불/반품 정책', href: '/refund' },
-    { name: '제휴 문의', href: '/partnership' }
+    { name: '이용약관', href: '#' },
+    { name: '개인정보처리방침', href: '#' },
+    { name: '환불/반품 정책', href: '#' },
+    { name: '제휴 문의', href: '#' }
   ]
 }
 
@@ -166,7 +166,7 @@ export default function Footer() {
                 href="https://smartstore.naver.com/modahlv"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-white text-gray-900 px-4 py-3 rounded-lg text-center font-semibold hover:bg-gray-100 transition-colors"
+                className="block w-full bg-primary-100 text-primary-700 px-4 py-3 rounded-lg text-center font-semibold hover:bg-primary-200 transition-colors border border-primary-200"
               >
                 네이버 스마트스토어 방문
               </Link>
@@ -207,7 +207,7 @@ export default function Footer() {
               제품 이미지는 연출된 것으로 실제 구성과 다를 수 있습니다.
             </p>
             <p className="mt-1">
-              모다리빙의 모든 제품은 품질보증서가 제공되며, 무상 A/S 기간은 구매일로부터 5년입니다.
+          
             </p>
           </div>
         </div>

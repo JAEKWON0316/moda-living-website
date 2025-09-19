@@ -71,7 +71,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 pt-20 md:pt-0">
       {/* 3D 배경 요소들 */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -236,14 +236,20 @@ export default function Hero() {
                     className="w-full h-full object-cover"
                     muted
                     playsInline
-                    preload="metadata"
+                    preload="auto"
                     poster="/images/products/product-main1.jpg"
-                    onLoadedMetadata={(e) => {
+                    autoPlay={false}
+                    onLoadStart={(e) => {
                       const video = e.target as HTMLVideoElement;
-                      video.currentTime = 0.5;
+                      setTimeout(() => video.currentTime = 0.1, 100);
                     }}
-                    onError={() => {
-                      console.log('Video loading failed, using poster');
+                    onLoadedData={(e) => {
+                      const video = e.target as HTMLVideoElement;
+                      video.currentTime = 0.1;
+                    }}
+                    onCanPlay={(e) => {
+                      const video = e.target as HTMLVideoElement;
+                      video.currentTime = 0.1;
                     }}
                   />
                   
