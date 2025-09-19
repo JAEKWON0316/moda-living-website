@@ -189,25 +189,14 @@ export default function Hero() {
             <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] bg-gradient-to-br from-white to-gray-100 rounded-3xl shadow-2xl overflow-hidden">
               {!showVideo ? (
                 <>
-                  {/* 영상 썸네일로 변경 */}
-                  <video
-                    src="/videos/products/moda-hero-video.mp4"
-                    className="w-full h-full object-cover"
-                    muted
-                    preload="auto"
-                    poster="/images/products/product-main1.jpg"
-                    onLoadedData={(e) => {
-                      // 첫 프레임을 썸네일로 설정
-                      const video = e.target as HTMLVideoElement;
-                      video.currentTime = 0.1;
-                    }}
-                    onCanPlay={(e) => {
-                      // 비디오가 재생 가능할 때 첫 프레임 설정
-                      const video = e.target as HTMLVideoElement;
-                      if (video.currentTime === 0) {
-                        video.currentTime = 0.1;
-                      }
-                    }}
+                  {/* 정적 썸네일 이미지 */}
+                  <Image
+                    src="/images/products/product-main1.jpg"
+                    alt="모다리빙 분리수거함"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
                   />
                   
                   {/* 비디오 재생 버튼 */}
@@ -221,27 +210,6 @@ export default function Hero() {
                       <Play className="h-4 w-4 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-primary-600 ml-1" />
                     </div>
                   </motion.button>
-
-                  {/* 플로팅 통계 요소들 - PC에서만 표시 */}
-                  <motion.div
-                    className="absolute top-4 left-4 lg:top-6 lg:left-6 glass-morphism p-3 lg:p-4 rounded-2xl shadow-lg hidden xl:block"
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1.2 }}
-                  >
-                    <div className="text-xs lg:text-sm font-semibold text-primary-600 mb-1">공간 절약</div>
-                    <div className="text-xl lg:text-2xl font-bold text-gray-900">70%</div>
-                  </motion.div>
-                  
-                  <motion.div
-                    className="absolute top-4 right-4 lg:top-6 lg:right-6 glass-morphism p-3 lg:p-4 rounded-2xl shadow-lg hidden xl:block"
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1.4 }}
-                  >
-                    <div className="text-xs lg:text-sm font-semibold text-primary-600 mb-1">친환경</div>
-                    <div className="text-xl lg:text-2xl font-bold text-gray-900">100%</div>
-                  </motion.div>
                 </>
               ) : (
                 <div className="relative w-full h-full">
