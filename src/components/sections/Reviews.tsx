@@ -249,16 +249,16 @@ export default function Reviews() {
           {/* 네비게이션 버튼 */}
           <button
             onClick={prevReview}
-            className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-primary-50 transition-colors"
+            className="absolute left-1 md:left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 md:w-12 md:h-12 bg-white/90 backdrop-blur-sm shadow-md md:shadow-lg rounded-full flex items-center justify-center hover:bg-primary-50 transition-colors"
           >
-            <ArrowLeft className="h-4 w-4 md:h-6 md:w-6 text-gray-600" />
+            <ArrowLeft className="h-3 w-3 md:h-6 md:w-6 text-gray-600" />
           </button>
           
           <button
             onClick={nextReview}
-            className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-primary-50 transition-colors"
+            className="absolute right-1 md:right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 md:w-12 md:h-12 bg-white/90 backdrop-blur-sm shadow-md md:shadow-lg rounded-full flex items-center justify-center hover:bg-primary-50 transition-colors"
           >
-            <ArrowRight className="h-4 w-4 md:h-6 md:w-6 text-gray-600" />
+            <ArrowRight className="h-3 w-3 md:h-6 md:w-6 text-gray-600" />
           </button>
         </motion.div>
 
